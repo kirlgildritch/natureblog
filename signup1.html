@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="signup1.css">
+</head>
+<body>
+
+    <form id="signupForm"  method="post" onsubmit="return validateForm()">
+        <h1>Create a new account</h1>
+        <p>It's quick and easy.</p>
+        <hr>
+    
+     
+        <input class="firstName" type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        <i class='bx bxs-user-detail'></i>
+
+        <div class="input1">
+        <input type="text" id="middleName" name="middleName" placeholder="Middle Name">
+        <i class='bx bxs-user-detail'></i>
+    </div>
+
+    <div class="input2">
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+        <i class='bx bxs-user-detail'></i>
+    </div>
+
+      
+
+        
+       
+
+        <div class="input-box">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <i class='bx bxs-envelope' ></i>
+        </div>
+        
+        <div class="input-box1">
+        <input type="tel" id="contactNumber" name="contactNumber"placeholder="Contact Number" required>
+        <i class='bx bxs-contact'></i>
+    </div>
+
+
+    <div class="input-box2">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <i class='bx bxs-lock'></i>
+    </div>
+        
+    <div class="input-box3">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <i class='bx bxs-lock'></i>
+    </div>
+     
+          <div class="I">I accept the Terms of Use & Privacy Policy</div>
+            <input type="checkbox" id="termsCheckbox" name="terms" >
+         
+        </label>
+<div class="btn">
+    <button type="submit">Sign Up</button></div>
+
+        <div id="errorMessages" class="error-message"></div>
+    </form>
+
+    <script>
+        function validateForm() {
+            var errorMessages = document.getElementById('errorMessages');
+            errorMessages.innerHTML = '';
+
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validate email format
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var email = document.getElementById('email').value;
+            if (!emailRegex.test(email)) {
+                errorMessages.innerHTML += 'Please enter a valid email address.<br>';
+            }
+
+            // Validate password complexity
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{7,}$/;
+            if (!passwordRegex.test(password)) {
+                errorMessages.innerHTML += 'Password must contain at least one uppercase letter, one lowercase letter, one digit, one symbol, and be at least 7 characters long.<br>';
+            }
+
+            // Validate password and confirm password match
+            if (password !== confirmPassword) {
+                errorMessages.innerHTML += 'Passwords do not match.<br>';
+            }
+
+            // Validate contact number length
+            var contactNumber = document.getElementById('contactNumber').value;
+            if (contactNumber.length !== 11) {
+                errorMessages.innerHTML += 'Contact number must contain precisely 11 digits.<br>';
+            }
+
+            // Validate checkbox
+            var termsCheckbox = document.getElementById('termsCheckbox');
+            if (!termsCheckbox.checked) {
+                errorMessages.innerHTML += 'Please accept the Terms of Use & Privacy Policy.<br>';
+            }
+
+            // Return false to prevent form submission if there are errors
+            if (errorMessages.innerHTML !== '') {
+                return false;
+            }
+
+            // Continue with form submission if all validations pass
+            return true;
+        }
+    </script>
+
+</body>
+</html>

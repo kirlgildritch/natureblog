@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="signup1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <form id="activityForm" onsubmit="validateForm(event)">
+        <h1>Login</h1>
+
+        <hr>
+        <div class="input-box4">
+            <input type="text" id="email" name="email" placeholder="Email or Number" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[0-9]+" title="Enter a valid email or number">
+            <i class='bx bxs-user-detail'></i>
+        </div>
+        <div class="input-box5">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class='bx bxs-lock'></i>
+        </div>
+
+        <label for="rememberme1" class="rememberme">Remember Me?</label>
+        <input type="checkbox" id="rememberme1" name="rememberme" onchange="rememberMe()"> 
+        
+        <div class="forgot">
+            <a href="signup.html">Forgot Password?</a>
+        </div>
+
+        <input type="submit" value="Login" class="btn-login">
+
+        <div class="signUp-link">
+            <p>Don't have an account? <a href="signup1.html" class="signInBtn-link">Sign Up</a></p>
+        </div>
+
+        <div id="error-message"></div>
+
+    </form>
+
+    <script type="text/javascript">
+        // Check if 'remember' is true in local storage and set the checkbox accordingly
+        var rememberCheckbox = document.getElementById('rememberme1');
+        rememberCheckbox.checked = localStorage.getItem('remember') === 'true';
+
+        function validateForm(event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+
+            errorMessage.innerHTML = ''; // Clear previous error messages
+
+            if (email.trim() === '') {
+                errorMessage.innerHTML += '<p class="error">Email or Number is required</p>';
+            }
+
+            if (password.trim() === '') {
+                errorMessage.innerHTML += '<p class="error">Password is required</p>';
+            } else if (password.length < 8) {
+                errorMessage.innerHTML += '<p class="error">Password must be at least 8 characters long</p>';
+            }
+
+            // Check if there are no error messages before submitting the form
+            if (errorMessage.innerHTML === '') {
+                document.getElementById('activityForm').submit();
+            }
+        }
+
+        // Function to handle the 'Remember Me' checkbox state
+        function rememberMe() {
+            var rememberCheckbox = document.getElementById('rememberme1');
+            localStorage.setItem('remember', rememberCheckbox.checked);
+        }
+    </script>
+</body>
+
+</html>

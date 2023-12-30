@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url("pexels-johannes-plenio-1996042.jpg");
+    background-size: cover;
+
+    
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+  
+    border-radius: 5px;
+}
+
+label {
+  
+    margin-top: 10px;
+
+}
+
+input, checkbox {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+input{
+    text-indent: 20px;
+    border-radius: 5px;
+    border: 1px  solid gray;
+    padding: 13px;
+    background-color: rgba(255, 255, 255, 0.5);     
+    
+}
+    
+input::placeholder {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px; /* Adjust the font size as needed */
+    /* Add any other font styles as needed */
+  
+  }
+
+button {
+    position: relative;
+    background-color: rgb(4, 156, 4);
+    color: white;
+    padding:8px 60px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 18px;
+    bottom: 120px;
+font-weight: bold;
+}
+
+
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+i{
+    position: relative;
+top: -40px;
+left: 10px;
+
+
+}
+#termsCheckbox{
+    position: relative;
+    left: -170px;
+    bottom: 140px;
+    
+}
+.I{
+    position: relative;
+    left: 50px;
+    bottom: 120px;
+}
+.btn{
+    text-align: center;
+}
+.input1{
+    position: relative;
+top: -21px;
+}
+.input2{
+    position: relative;
+    top: -41px;
+}
+.input-box{
+    position: relative;
+    top: -61px;
+}
+.input-box1{
+    position: relative;
+    top: -81px;
+}
+.input-box2{
+    position: relative;
+    top: -101px;
+}
+.input-box3{
+    position: relative;
+    top: -121px;
+}
+.input-box5{
+    position: relative;
+    top: -20px;
+}
+
+h1, p{
+    text-align: center;
+    
+}
+.rememberme{
+    position: relative;
+    top: -40px;
+    right: -30px;
+}
+#rememberme1 {
+    position: relative;
+    top: -60px; /* Adjust as needed */
+    right: 190px; /* Adjust as needed */
+}
+
+.forgot{
+    position: relative;
+    left: 260px;
+    top: -85px;
+}
+.btn-login{
+    position: relative;
+    
+    background-color: rgb(4, 156, 4);
+    color: white;
+    padding:8px 50px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 18px;
+font-weight: bold;
+
+}
+.signUp-link{
+    position: relative;
+  
+}
+#error-message{
+    color: red;
+    
+}

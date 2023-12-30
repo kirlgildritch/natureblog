@@ -1,0 +1,155 @@
+body {
+    font-family: Arial;
+
+    
+}
+main{
+    position: relative;
+    top: -700px;
+    color: black;
+}
+main p, footer p{
+    color: black;
+}
+
+footer p{
+    text-align: center;
+}
+footer {
+    color: black;
+    background-color: gray;
+    height: 100px;
+
+}
+.social-media ,.social-media a{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+}
+dialog{
+    background-color: gray;
+}
+
+
+header,
+p,
+time {
+
+    color: white;
+    font-size: 20px;
+
+
+}
+
+header h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.header {
+    position: relative;
+    top: -500px;
+    left: 50px;
+
+
+}
+
+.bg {
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    margin-top: 0;
+    margin: -1;
+
+}
+
+.authorpic {
+    position: relative;
+    top: -190px;
+    left: 800px;
+   height: 470px;
+
+}
+.authorpic:hover{
+    opacity: 50%;
+    transition: 1s;
+}
+
+.author-name {
+    position: relative;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    padding: 25px;
+    width: 500px;
+    top: -250px;
+   
+    left: 383px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.login a {
+    position: relative;
+    
+  
+    top: -740px;
+    left: 1000px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+.login a:hover{
+    color: red;
+
+}
+.navigation a{
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative;
+    top: -750px;
+   left: 350px;
+   font-weight: bold;
+   color: black;
+}
+nav a:hover{
+    color: red;
+
+}
+.iframe{
+    position: relative;
+    top: -700px;
+    height: 2000px;
+    
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+
+}
+.img {
+    display: block; /* Initially display the images */
+}
+
+.img img{
+    position: relative;
+    top: -2700px;
+    height: 270px;
+    margin: 17px;
+    display: inline-block;
+   
+}
+.cebu-definition p, .manila-definition p    {
+    color: black;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.cebu-pic img{
+    display: inline-block;
+    position: relative;
+   
+    height: 270px;
+    margin: 17px;
+}
